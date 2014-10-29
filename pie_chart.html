@@ -8,53 +8,27 @@
     <div id='chart' style="width:600px;height:300px;"></div>	
     <script src="js/flotr2.js"></script>
 <script>
-var co2 = [
-    [ 1959, 315.97 ],
-    [ 1960, 316.91 ],
-    [ 1961, 317.64 ],
-    [ 1962, 318.45 ]
+var data = [
+    {data: [[0,22.4]], label: "Extreme Poverty"},
+    {data: [[1,77.6]], label: "Live on more than 1.25$ per day"}
 ];
-
-var temp = [
-    [ 1959,  0.0776 ],
-    [ 1960,  0.0780 ],
-    [ 1961,  0.1028 ],
-    [ 1962,  0.1289 ]
-];
-
-var zero = [];
-for (var yr=1959; yr<1963; yr++) { zero.push([yr, 0]); };
 
 window.onload = function () {
-Flotr.draw(
-    document.getElementById("chart"),
-    [ {
-        data: zero,
-        label: "20<sup>th</sup> Century Baseline Temperature",
-        lines: {show:true, lineWidth: 1},
-        shadowSize: 0,
-        color: "#545454"
-      },
-      { 
-        data: temp,
-        label: "Yearly Temperature Difference (°C)",
-        lines: {show:true}
-      },
-      {
-        data: co2,
-        yaxis: 2,
-        label: "CO<sub>2</sub> Concentration (ppm)",
-        lines: {show:true}
-      }
-    ],
-    {
-        title: "Global Temperature and CO2 Concentration (NOAA Data)",
-        grid: {horizontalLines: false, verticalLines: false},
-        yaxis: {min: 300, max: 330},
-        y2axis: {min: 0, max: 0.12, 
-                tickFormatter: function(val) {return val+" °C";}}
-    }
-);
+    Flotr.draw(document.getElementById("chart"), data, {
+        pie: {
+            show: true
+        },
+        yaxis: {
+            showLabels: false
+        },
+        xaxis: {
+            showLabels: false
+        },
+        grid: {
+            horizontalLines: false,
+            verticalLines: false
+        }
+    });
 };
 </script>
   </body>
