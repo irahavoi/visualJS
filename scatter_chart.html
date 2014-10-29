@@ -40,16 +40,17 @@ window.onload = function () {
     Flotr.draw(
     document.getElementById("chart"),
     [
-        { data: pacific,  points: {show:true} },
-        { data: europe,   points: {show:true} },
-        { data: us,       points: {show:true} }
+        { data: pacific,  label: "Pacific", points: {show:true} },
+        { data: europe,   label: "Europe", points: {show:true} },
+        { data: us,       label: "United States", points: {show:true} }
     ],{ 
         title: "Life Expectancy vs. Health Care Spending",
         subtitle: "(by Country, 2010 OECD data)",
-        xaxis: {min: 5, max: 20, tickDecimals: 0, 
-                title: "Spending as Percentage of GDP", 
-                tickFormatter: function(val) {return val+"%"}}, 
-        yaxis: {min: 70, max: 85, tickDecimals: 0, title: "Years"} 
+        xaxis: {min: 5, max: 25, tickDecimals: 0, 
+               title: "Spending as Percentage of GDP", 
+               tickFormatter: function(val) {return val+"%"}}, 
+        yaxis: {min: 70, max: 85, tickDecimals: 0, title: "Years"},
+        legend: {position: "ne"}
     }
 );
 };
