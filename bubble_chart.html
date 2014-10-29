@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id='chart' style="width:600px;height:300px;"></div>	
+    <script src="js/flotr2.js"></script>
+<script>
+var katrina = [
+    { north: 26.2, west: 85.5, wind:  35 },
+    { north: 27.0, west: 86.4, wind:  35 },
+    { north: 27.2, west: 81.0, wind:  245 }];
+
+function get_points(source_array, filter_function) {
+    var result = [];
+    for (var i=0; i<source_array.length; i++) {
+        if ( (typeof filter_function === "undefined")
+          || (typeof filter_function !== "function")
+          || filter_function(source_array[i]) ) {
+            result.push([
+                source_array[i].west * -1,
+                source_array[i].north,
+                source_array[i].wind
+            ]);
+        }
+    }
+    return result;
+}
+
+window.onload = function () {
+    Flotr.draw(
+    document.getElementById("chart"),
+    [
+      { 
+          data: get_points(katrina, function(obs) {
+                    return (obs.wind < 39);
+                }), 
+          color: "#74add1",
+	  label: "Category 1",
+          bubbles: {show:true, baseRadius: 0.3, lineWidth: 1}
+      },{ 
+      },{ 
+          data: get_points(katrina, function(obs) {
+                    return (obs.wind >= 157);
+                }), 
+          color: "#d73027",
+          label: "Category 5",
+          bubbles: {show:true, baseRadius: 0.3, lineWidth: 1}
+      }
+    ],{ 
+        grid: {
+            backgroundImage: "img/gulf.png", 
+            horizontalLines: false, 
+            verticalLines: false
+        },
+        yaxis: {showLabels: false, min: 23.607, max: 33.657},
+        xaxis: {showLabels: false, min: -94.298, max: -77.586},
+        legend: {position: "sw"}
+    }
+);
+};
+</script>
+</body>
