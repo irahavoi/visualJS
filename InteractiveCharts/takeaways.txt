@@ -1,0 +1,10 @@
+* Access-Control-Allow-Origin: * - This http header tells the browser that it is safe for any page to access the data (related to same origin policy)
+  Another way to by-pass this policy is to use jsonP when requesting. (The trick relies on the one exception to the same origin policy that all browsers recognize: 
+  third-party JavaScript files. Browsers do allow web pages to request JavaScript files from third-party servers 
+  (that is, after all, how services such as Google Analytics can work). 
+  We just need to make the response data from the World Bank look like regular JavaScript instead of json.)
+
+* $.getJSON() <-- Returns a Deffered object implemeting Promise interface (See more: http://api.jquery.com/jquery.getjson/)
+* $.grep(array, function) <-- Finds elements in the given array which satissfy the passed function (the function should return true) (See more: http://api.jquery.com/jquery.grep/)
+* $.map(array, function) <--Translate all items in an array or object to new array of items. (See more: http://api.jquery.com/jQuery.map/)
+* $.when() <-- Provides a way to execute callback functions based on one or more objects, usually Deferred objects that represent asynchronous events. (See more: http://api.jquery.com/jQuery.when/)
