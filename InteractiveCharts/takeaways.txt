@@ -8,3 +8,8 @@
 * $.grep(array, function) <-- Finds elements in the given array which satissfy the passed function (the function should return true) (See more: http://api.jquery.com/jquery.grep/)
 * $.map(array, function) <--Translate all items in an array or object to new array of items. (See more: http://api.jquery.com/jQuery.map/)
 * $.when() <-- Provides a way to execute callback functions based on one or more objects, usually Deferred objects that represent asynchronous events. (See more: http://api.jquery.com/jQuery.when/)
+
+*API repositories:
+	APIhub <-- http://api-portal.anypoint.mulesoft.com/?ref=apihub
+	ProgrammableWeb <-- http://www.programmableweb.com/
+	US Government <-- https://www.data.gov/developers/apis

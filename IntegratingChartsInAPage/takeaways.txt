@@ -1,0 +1,2 @@
+* Jquery Sparklines <-- This jQuery plugin generates sparklines (small inline charts) directly in the browser 
+     using data supplied either inline in the HTML, or via javascript. (See more: http://omnipotent.net/jquery.sparkline/#s-about)
