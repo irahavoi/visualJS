@@ -1,0 +1,5 @@
+* Squarified treemaps algorithm  developed by Bruls, Huizing, and van Wijk. (See more: http://www.win.tue.nl/~vanwijk/stm.pdf)
+* Treemap squared library provides a way to easily generate attractive treemaps. (See more: https://github.com/imranghory/treemap-squared)
+* Raphaël - a small JavaScript library that should simplify your work with vector graphics on the web. 
+   If you want to create your own specific chart or image crop and rotate widget, 
+   for example, you can achieve it simply and easily with this library. (See more: http://raphaeljs.com/)
