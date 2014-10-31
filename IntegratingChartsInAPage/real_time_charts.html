@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+
+    <div id="dashboard">
+      <div id="chart" style="float:left"></div>
+      <div id="value" style="float:left"></div>
+    </div>
+
+    <!--[if lt IE 9]><script src="js/excanvas.min.js"></script><![endif]-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.0.0/jquery.sparkline.min.js"></script>
+    <script>
+      (function getData(){
+          setTimeout(function(){
+              // request the data from the server
+              $.ajax({ url: "/api/data", success: function(data) {
+
+                  $('#chart').sparkline(data);
+                  $('#value').text(data.slice(-1));
+
+                  getData();
+              }, dataType: "json"});
+          }, 30000);  // 30000: wait 30 seconds to make the request
+      })();
+    </script>
+  </body>
+</html>

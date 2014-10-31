@@ -2,3 +2,8 @@
      using data supplied either inline in the HTML, or via javascript. (See more: http://omnipotent.net/jquery.sparkline/#s-about)
 * IE < 9 does not support canvas. Use  <!--[if lt IE 9]><script src="js/.min.js"></script><![endif]--> to add library for canvas in IE < 9
 * Use $.extend to extend configuration objects in order to aboid code duplication
+* Trading View <-- Advanced Real-Time Chart Widget (See more: https://www.tradingview.com/widget/)
+* $.slideUp and $.slideDown
+* Do not use setInterval() for server polling: "If the server or network encounters a problem, then requests triggered by setInterval()will continue unabated, 
+  stacking up in a queue. Then, when communication with the server is restored, all of the pending requests will immediately finish, and we’d have a flood of data to handle." 
+  Use 
