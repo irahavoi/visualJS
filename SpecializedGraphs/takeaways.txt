@@ -4,3 +4,4 @@
    If you want to create your own specific chart or image crop and rotate widget, 
    for example, you can achieve it simply and easily with this library. (See more: http://raphaeljs.com/)
 * HeatMapJS <-- allows to create heat maps. (See more: http://www.patrick-wied.at/static/heatmapjs/)
+* SigmaJS <--library dedicated to graph drawing. It makes easy to publish networks on Web pages (See more: http://sigmajs.org/)
