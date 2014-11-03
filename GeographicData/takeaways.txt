@@ -1,2 +1,3 @@
 * Stately is a symbol font that makes it easy to create a map of the US (See more: http://intridea.github.io/stately/)
 * Continental - a symbol font for Europe (See more: http://sathomas.me/continental/)
+* SVG files are simply xml(!) and they can be edited and styled using css
