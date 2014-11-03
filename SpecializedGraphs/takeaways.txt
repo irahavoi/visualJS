@@ -6,3 +6,4 @@
 * HeatMapJS <-- allows to create heat maps. (See more: http://www.patrick-wied.at/static/heatmapjs/)
 * SigmaJS <--library dedicated to graph drawing. It makes easy to publish networks on Web pages (See more: http://sigmajs.org/)
 * wordcloud2.js <-- ag cloud/Wordle presentation on 2D canvas or HTML (See more: http://timdream.org/wordcloud2.js/)
+* WordFreq - library helping to perform text analysis, words calculation (See more:http://timdream.org/wordfreq/)
