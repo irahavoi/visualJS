@@ -1,0 +1,5 @@
+* D3.js <-- very powerful library for custom visualizations: 
+   D3.js doesn’t provide pre-defined visualizations such as charts, graphs, or maps. 
+  Instead, it’s a toolbox for data visualization, and it gives you the tools to create your own charts, graphs, maps, and more.
+  (See more: http://d3js.org/)
+* Site of Mike Bostock: http://bost.ocks.org/mike/
