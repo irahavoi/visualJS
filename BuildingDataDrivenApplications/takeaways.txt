@@ -6,9 +6,10 @@
               map, filter, invoke — as well as more specialized goodies: function binding, javascript templating, 
               creating quick indexes, deep equality testing, and so on. (See more: http://underscorejs.org/)
 * MomentJS <-- Liabrary for manipulating dates (See more: http://momentjs.com/)
-* Yeoman can create Backbone Model stubs for you: yo backbone:model myModelName
-* Yeoman can create Backbone Collections stubs as well: backbone:collection myCollectionName
-* Yeoman can create Backbone View stubs as well: yo backbone:view myViewName
+* Yeoman can create Backbone Model stubs for you: $ yo backbone:model myModelName
+* Yeoman can create Backbone Collections stubs as well: $ backbone:collection myCollectionName
+* Yeoman can create Backbone View stubs as well: $ yo backbone:view myViewName
+* Yeoman can create Backbone Router stubs as well: $ yo backbone:router app 
 * Jst task <-- Run this task with the grunt jst command. Precompiles Underscore templates to JST file. (https://github.com/gruntjs/grunt-contrib-jst)
              this task uses underscore template language (See more: http://underscorejs.org/#template) 
              that compiles js templates into functions that can be evaluated for rendering.
@@ -18,6 +19,8 @@
 	     every time the request to the server is made.    
 * To help Backbone to transform the response from the server to the needed format, use model's 'parse' method. 
              The job of that function is to take the response that the server provides and return the response that Backbone.js expects.
+* Routers help to control apps navigation and are handy when users want to bookmark the SPA's state
+* Backbone.history takes care of 'remembering' the state of the SPA (in case user wants to use back and forward buttons in their browser)
 
 
  
