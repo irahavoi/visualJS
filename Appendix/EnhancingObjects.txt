@@ -1,0 +1,27 @@
+Underscore helpful methods for enhancing objects:
+*  Keys and Values:
+    _(obj).keys() <--Returns keys of the object
+    _(obj).values() <--Returns values of the object
+    _(obj).pairs() <-- Creates a 2-dimensional array containing key-value pairs of the object
+    _(pairs).object() <-- Reverse functionality for pairs() method. Creates an object from an array of key-value pairs
+    _(obj).invert() <-- Swaps keys and values (if values are duplicated the last one wins)
+* Object Subsets:
+   _(obj).pick("width", "height") <-- Returns the object containing onle the mentioned attributes others are cleaned up.
+   _(obj).omit("width", "height") <-- Creates a new object deleting the listed attributes
+* Updating Attributes:
+   _.extend(standard, obj) <--updates and adds missing properties to an object.
+		(Note: this method modifies the given object and does not create a new instance)
+   _.defaults(obj, standard) <-- adds missing properties to an object and overrides the existing ones with default values
+		(Note: this method modifies the given object and does not create a new instance)
+   
+   
+   
+
+    
+    
+    
+    
+    
+    
+    
+    

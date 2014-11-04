@@ -1,0 +1,41 @@
+Underscore helpful methods for manipulating Collections:
+In Underscore.js both arrays and objects are collections, so the tools in this section can be applied to pure arrays, pure objects, or data structures that combine both.
+
+*  Iteration:
+   _(collection).each(function(item){...}) <-- Executes an arbitrary function on each item in a collection
+	There are two important differences between the Underscore.js and jQuery versions of this method. 
+        First, the parameters passed to the iterator function differ between the two. 
+        Underscore.js passes (element, index, list) for arrays and (value, key, list) for simple objects,while jQuery passes (index, value). 
+        Secondly, at least as of this writing, the Underscore.js implementation can execute much faster than the jQuery version, depending on the browser. 
+        (jQuery also includes a $.map() function that’s similar to the Underscore.js method.)
+   _(collection).map(function(obj){...}) <--  Iterates through a collection and transforms each element with an arbitrary function. 
+       It returns a new collection containing the transformed elements. 
+   _(collection).reduce(count, item) <-- Iterates through a collection and returns a single value. 
+       One parameter initializes this value, and the other parameter is an arbitrary function that updates the value for each element in the collection. 
+       We can use reduce() for example, to calculate how many teams have a winning percentage over 500.
+
+*  Finding Elements:
+   _(collection).find(function(obj){...}) <-- Returns the first element in the collection that meets the criteria.
+   _(collection).filter(function(obj){...}) <-- Returns all elements in the collection that meet the criteria.
+   _(collection).reject(funcction(obj){...}) <-- Returns all elements in the collection that do not meet the criteria.  
+   _(collection).where(criteriaObject) <-- Instead of an arbitrary function to check for a match, where() takes for its parameter a set of properties that must match.
+   _(collection).findWhere(criteriaObject) <-- Returns the first object matching the criteria object.
+   _(collection).pluck("firstName") <-- Returns an array consisting of values for the given key only.
+
+*  Testing Collections:
+   _(collection).every(function(item) { return boolean }) <-- Tells us whether or not all elements in a collection pass an arbitrary test.
+   _(collection).any(function(item) { return boolean }) <-- Tells us whether or not any element in a collection passes an arbitrary test.
+   _(collection).max(function(item) { return int }) <-- Returns the element with the maximum value determined by the arbitrary function.
+   _(collection).min(function(item) { return int }) <-- Returns the element with the minimum value determined by the arbitrary function.
+
+*  Rearranging collections:
+   _(collection).sortBy(function(obj){...}) <-- Sorts the collection
+   _(collection).groupBy("propertyName") <--can also accept function as an argument
+   _(collection).countBy("propertyName") <--can also accept function as an argument
+   _(collection).shuffle() <-- Randomly reorders a collection
+
+   
+   
+   
+    
+   
