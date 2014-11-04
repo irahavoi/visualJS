@@ -2,4 +2,10 @@
 * Backbone <--Backbone.js gives structure to web applications by providing models with key-value binding and custom events, 
               collections with a rich API of enumerable functions, views with declarative event handling, 
               and connects it all to your existing API over a RESTful JSON interface. (See more: http://backbonejs.org/)
+* UnderscoreJS <-- library Underscore provides over 100 functions that support both your favorite workaday functional helpers: 
+              map, filter, invoke — as well as more specialized goodies: function binding, javascript templating, 
+              creating quick indexes, deep equality testing, and so on. (See more: http://underscorejs.org/)
 * MomentJS <-- Liabrary for manipulating dates (See more: http://momentjs.com/)
+* Yeoman can create Backbone Model stubs for you: yo backbone:model run
+* Yeoman can creat Backbone Collections stubs as well: backbone:collection runs
+ 
