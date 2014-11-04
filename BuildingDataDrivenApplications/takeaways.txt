@@ -7,11 +7,17 @@
               creating quick indexes, deep equality testing, and so on. (See more: http://underscorejs.org/)
 * MomentJS <-- Liabrary for manipulating dates (See more: http://momentjs.com/)
 * Yeoman can create Backbone Model stubs for you: yo backbone:model myModelName
-* Yeoman can creat Backbone Collections stubs as well: backbone:collection myCollectionName
+* Yeoman can create Backbone Collections stubs as well: backbone:collection myCollectionName
 * Yeoman can create Backbone View stubs as well: yo backbone:view myViewName
 * Jst task <-- Run this task with the grunt jst command. Precompiles Underscore templates to JST file. (https://github.com/gruntjs/grunt-contrib-jst)
-               this task uses underscore template language (See more: http://underscorejs.org/#template) 
-               that compiles js templates into functions that can be evaluated for rendering.
+             this task uses underscore template language (See more: http://underscorejs.org/#template) 
+             that compiles js templates into functions that can be evaluated for rendering.
+* When a 'sync' method is present in Backbone's model/collection, Backbone.js calls it whenever it makes an ajax request.
+             sync: function(method, collection, options) <--method: GET, POST, etc, collection, options
+             This way we can add additional parameters to the request object (For example, authorization token) 
+	     every time the request to the server is made.    
+* To help Backbone to transform the response from the server to the needed format, use model's 'parse' method. 
+             The job of that function is to take the response that the server provides and return the response that Backbone.js expects.
 
 
  
